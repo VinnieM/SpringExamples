@@ -13,6 +13,9 @@ import javax.persistence.Table;
 @Table(name = "Person")
 public class Person {
 
+  public Person() {
+  }
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int id;
