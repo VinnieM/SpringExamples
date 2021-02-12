@@ -1,0 +1,11 @@
+<?xml version = "1.0"?>
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/orm/hbm">
+  <class name="code.learn.hibernate.pojo.Departments" table="Departments">
+    <id name="deptNo" column="dept_no"
+      type="java.lang.String">
+      <generator class="assigned"/>
+    </id>
+    <property name="deptName" column="dept_name"
+      type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

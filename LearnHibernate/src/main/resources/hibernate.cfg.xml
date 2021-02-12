@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/employees</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">Bravo@8985760</property>
+    <!--    <property name="hibernate.current_session_context_class">thread</property>-->
+
+    <!-- Dialect-->
+    <property name="dialect">org.hibernate.dialect.MySQL57Dialect</property>
+
+    <!-- JDBC Connection Pool-->
+    <property name="connection.pool_size">1</property>
+
+    <!-- Drop existing tables and create new ones-->
+<!--    <property name="hbm2ddl.auto">update</property>-->
+
+    <!-- Echo all executed SQL to stdout -->
+    <property name="show_sql">true</property>
+
+    <!-- List of XML mapping files -->
+    <!--    <mapping class ="code.learn.hibernate.pojo.Departments" resource="code/learn/hibernate/pojo/Departments.hbm.xml"/>-->
+    <mapping class="code.learn.hibernate.pojo.Departments"/>
+    <!--    <mapping resource="src/main/resources/HBM/Departments.hbm.xml"/>-->
+
+  </session-factory>
+</hibernate-configuration>
